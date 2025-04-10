@@ -22,6 +22,7 @@ public class Codigomorse { // inicio de la clase Codigomorse
         System.out.println(Ideomas.get("Introduccion"));
         scan.nextLine(); // limpiar buffer
         String text = scan.nextLine();
+        System.out.println("-------------");
         // fin para poner codigo morse o natural
 
         // convierte el texto en mayusculas
@@ -30,10 +31,13 @@ public class Codigomorse { // inicio de la clase Codigomorse
         // inicio del if que dice si es codigo morse o natural
         if (text.contains(morseLine)) {
             System.out.println(Ideomas.get("Esmorse"));
+            System.out.println("-------------");
         } else if (text.contains(morsePoint)) {
             System.out.println(Ideomas.get("Esmorse"));
+            System.out.println("-------------");
         } else {
             System.out.println(Ideomas.get("Noesmorse"));
+            System.out.println("-------------");
             // llama al metodo getmorse para convertir el texto a morse
             System.out.println(getMorse(text));
         }
@@ -45,23 +49,37 @@ public class Codigomorse { // inicio de la clase Codigomorse
     public static void getIdeoma() {
         // Atributo string para que el usuario seleccione el idioma
         String tag = "";
+        boolean valid = false;
         // inicio del menu de seleccion ideoma
-        System.out.println("Select");
-        System.out.println("1. English");
-        System.out.println("2. Español");
-        switch (scan.nextInt()) {
-            case 1:
-                System.out.println("------------");
-                tag = "en-EN";
-                break;
-            case 2:
-                System.out.println("------------");
-                tag = "es-ES";
-                break;
-            default:
+        do {
+            try {
+                System.out.println("Select");
+                System.out.println("1. English");
+                System.out.println("2. Español");
+                switch (scan.nextInt()) {
+                    case 1:
+                        System.out.println("------------");
+                        tag = "en-EN";
+                        valid = true;
+                        break;
+                    case 2:
+                        System.out.println("------------");
+                        tag = "es-ES";
+                        valid = true;
+                        break;
+                    default:
+                        System.out.println("-------------");
+                        System.out.println("Error, please select a valid option.");
+                        System.out.println("-------------");
+                        break;
+                }
+            } catch (InputMismatchException e) {
                 System.out.println("-------------");
-                break;
-        } // fin del menu de sellecion de ideoma
+                System.out.println("Error, please select a valid option.");
+                System.out.println("-------------");
+                scan.nextLine(); // limpiar buffer
+            }
+        } while (!valid); // fin del menu de seleccion ideoma
 
         Ideomas.cargar(tag); // carga idioma segun seleccion
     }
