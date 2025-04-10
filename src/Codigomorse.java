@@ -56,6 +56,10 @@ public class Codigomorse { // inicio de la clase Codigomorse
                 System.out.println("Select");
                 System.out.println("1. English");
                 System.out.println("2. Español");
+                System.out.println("3. Francais");
+                System.out.println("4. Portugues");
+                System.out.println("5. Italiano");
+                System.out.println("-------------");
                 switch (scan.nextInt()) {
                     case 1:
                         System.out.println("------------");
@@ -65,6 +69,21 @@ public class Codigomorse { // inicio de la clase Codigomorse
                     case 2:
                         System.out.println("------------");
                         tag = "es-ES";
+                        valid = true;
+                        break;
+                    case 3:
+                        System.out.println("------------");
+                        tag = "fr-FR";
+                        valid = true;
+                        break;
+                    case 4:
+                        System.out.println("------------");
+                        tag = "pt-PT";
+                        valid = true;
+                        break;
+                    case 5:
+                        System.out.println("------------");
+                        tag = "it-IT";
                         valid = true;
                         break;
                     default:
