@@ -16,7 +16,7 @@ public class Codigomorse { // inicio de la clase Codigomorse
     // atributo para añadir texto
     public static String text = ""; // atributo para añadir texto
 
-    public static void main(String[] args) { // inicio del main
+    public static void main(final String[] args) { // inicio del main
         // llamamos al metoodo getIdeoma para seleccionar el idioma
         MenuIdeoma.getIdeoma();
 

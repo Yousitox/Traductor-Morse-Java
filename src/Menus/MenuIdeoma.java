@@ -3,13 +3,15 @@ package Menus;
 // imports
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 import local.Ideomas;
+
 // fin de imports
 public class MenuIdeoma { // clase MenuIdeoma
-        // metodo para seleccionar el idioma
+    // metodo para seleccionar el idioma
     public static void getIdeoma() { // inicio del metodo getIdeoma
         // Atributo scanner para leer la entrada del usuario
-        Scanner scan = new Scanner(System.in);
+        final Scanner scan = new Scanner(System.in);
         // Atributo string para que el usuario seleccione el idioma
         String tag = "";
         boolean valid = false;
@@ -22,6 +24,7 @@ public class MenuIdeoma { // clase MenuIdeoma
                 System.out.println("3. Francais");
                 System.out.println("4. Portugues");
                 System.out.println("5. Italiano");
+                System.out.println("6. Neerlandes");
                 System.out.println("-------------");
                 switch (scan.nextInt()) {
                     case 1:
@@ -49,13 +52,18 @@ public class MenuIdeoma { // clase MenuIdeoma
                         tag = "it-IT";
                         valid = true;
                         break;
+                    case 6:
+                        System.out.println("------------");
+                        tag = "nl-NL";
+                        valid = true;
+                        break;
                     default:
                         System.out.println("-------------");
                         System.out.println("Error, please select a valid option.");
                         System.out.println("-------------");
                         break;
                 }
-            } catch (InputMismatchException e) {
+            } catch (final InputMismatchException e) {
                 System.out.println("-------------");
                 System.out.println("Error, please select a valid option.");
                 System.out.println("-------------");

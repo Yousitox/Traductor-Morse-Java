@@ -11,7 +11,7 @@ import local.Ideomas;
 public class Morse {
     // atributo privado morse
     // es un mapa que relaciona un caracter con su representacion en morse
-    private Map<Character, String> morse;
+    private final Map<Character, String> morse;
 
     // constructor de la clase Morse
     // inicializa el mapa morse con los caracteres y sus representaciones en morse
@@ -50,5 +50,5 @@ public class Morse {
     // devuelve un mapa que relaciona un caracter con su representacion en morse
     public Map<Character, String> getMorseMap() {
         return morse;
-    } //fin metodo
+    } // fin metodo
 }

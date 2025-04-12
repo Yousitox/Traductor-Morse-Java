@@ -8,12 +8,13 @@ import java.util.Map;
 // fin imports
 
 public class Natural { // inicio clase Natural
-        // atributo privado Natural
+    // atributo privado Natural
     // es un mapa que relaciona un caracter con su representacion en Natural
-    private Map<String, Character> natural;
+    private final Map<String, Character> natural;
 
     // constructor de la clase Natural
-    // inicializa el mapa Natural con los caracteres y sus representaciones en Natural
+    // inicializa el mapa Natural con los caracteres y sus representaciones en
+    // Natural
     public Natural() {
         natural = new HashMap<>();
         natural.put(".-", 'A');
@@ -48,5 +49,5 @@ public class Natural { // inicio clase Natural
     // devuelve un mapa que relaciona un caracter con su representacion en Natural
     public Map<String, Character> getNaturalMap() {
         return natural;
-    } //fin metodo
+    } // fin metodo
 } // fin clase Natural
