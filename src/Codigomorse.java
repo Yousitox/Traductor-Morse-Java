@@ -10,12 +10,22 @@ import natural.NaturalCombert;
 
 // fin impports
 
+/**
+ * Codigomorse es la clase principal del programa.
+ * Esta clase se encarga de convertir texto natural a morse y viceversa.
+ * 
+ * @author Yousitox
+ * @version 1.0
+ */
 public class Codigomorse { // inicio de la clase Codigomorse
     // Scanner
     public static Scanner scan = new Scanner(System.in);
     // atributo para añadir texto
     public static String text = ""; // atributo para añadir texto
 
+    /**
+     * @param text.contains(morsePoint)
+     */
     public static void main(final String[] args) { // inicio del main
         // llamamos al metoodo getIdeoma para seleccionar el idioma
         MenuIdeoma.getIdeoma();
@@ -28,6 +38,9 @@ public class Codigomorse { // inicio de la clase Codigomorse
 
     } // fin del main
 
+    /**
+     * @param text.contains(morsePoint)
+     */
     private static void getNaturalMorse(String text) { // inicio del metodo getNaturalMorse
         // Comstante para saber si es morse o no
         final String morseLine = "-";

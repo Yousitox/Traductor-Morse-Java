@@ -46,6 +46,9 @@ public class Morse {
         morse.put('Z', "--..");
     } // fin constructor
 
+    /**
+     * @return Map<Character, String>
+     */
     // metodo que devuelve el mapa morse
     // devuelve un mapa que relaciona un caracter con su representacion en morse
     public Map<Character, String> getMorseMap() {

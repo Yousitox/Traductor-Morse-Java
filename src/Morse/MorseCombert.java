@@ -5,6 +5,11 @@ import java.util.Map;
 import local.Ideomas;
 
 public class MorseCombert {
+
+    /**
+     * @param text.toCharArray()
+     * @return String
+     */
     public static String getMorse(final String text) { // inicio del metodo getMorse
         // crea una instancia de la clase Morse para acceder al mapa de caracteres
         final Morse morseconvert = new Morse();

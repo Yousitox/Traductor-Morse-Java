@@ -7,7 +7,11 @@ import java.util.Scanner;
 import local.Ideomas;
 
 // fin de imports
-public class MenuIdeoma { // clase MenuIdeoma
+public class MenuIdeoma {
+    /**
+     * @param Scanner(System.in
+     */
+    // clase MenuIdeoma
     // metodo para seleccionar el idioma
     public static void getIdeoma() { // inicio del metodo getIdeoma
         // Atributo scanner para leer la entrada del usuario

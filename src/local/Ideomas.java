@@ -7,13 +7,21 @@ public class Ideomas { // inicio clase ideomas
     // atributo estatica accesible desde todo el programa
     private static ResourceBundle idiomas;
 
+    /**
+     * @param tag
+     */
     // metodo puvlica y estatica para cargar el ideoma
     // esto para poder llamarlo en cualquier archivo de forma cencilla
     public static void cargar(String tag) {
         Locale locale = Locale.forLanguageTag(tag);
         idiomas = ResourceBundle.getBundle("local.mensajes", locale);
     }// fin de la metodo para cargar ideomas
-     // metodo publica estatica
+
+    /**
+     * @param clave
+     * @return String
+     */
+    // metodo publica estatica
     /*
      * Lo que hac esta metodo es retornar
      * idiomas, es el atributo,

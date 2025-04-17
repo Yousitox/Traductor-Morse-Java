@@ -45,6 +45,9 @@ public class Natural { // inicio clase Natural
         natural.put("--..", 'Z');
     } // fin constructor
 
+    /**
+     * @return Map<String, Character>
+     */
     // metodo que devuelve el mapa Natural
     // devuelve un mapa que relaciona un caracter con su representacion en Natural
     public Map<String, Character> getNaturalMap() {

@@ -5,6 +5,11 @@ import java.util.Map;
 import local.Ideomas;
 
 public class NaturalCombert {
+
+    /**
+     * @param palabras
+     * @return String
+     */
     public static String getNatural(final String text) { // inicio del metodo getNatural
         // crea una instancia de la clase Natural para acceder al mapa de caracteres
         final Natural naturalconvert = new Natural();
